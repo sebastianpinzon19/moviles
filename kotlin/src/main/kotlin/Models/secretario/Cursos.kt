@@ -7,5 +7,5 @@ class Curso {
     val intensidadHorariaCurso = "40 horas"
     val estadoCurso = true
     val fundacionId = "Fundacion001"
-    val ediciones = listOf(Edicion())
+    val ediciones = listOf(565212)
 }
