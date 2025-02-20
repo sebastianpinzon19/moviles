@@ -7,5 +7,4 @@ class Edicion {
     val estadoEdicion = true
     val cursoId = "Curso001"
     val horarios = listOf("Lunes 8:00-10:00", "Miércoles 8:00-10:00")
-    val estudiantes = listOf(reyes)
 }
