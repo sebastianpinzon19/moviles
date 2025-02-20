@@ -2,7 +2,7 @@ package estudiante.kt.Models.secretario
 
 import estudiante.kt.Models.administrador.*
 
-class Estudiante {
+class Estudiantesecretario {
     val _id = "Estudiante001"
     val nombreEstudiante = "Juan"
     val apellidoEstudiante = "Pérez"

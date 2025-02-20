@@ -1,6 +1,6 @@
 package estudiante.kt
 
-class Estudiante {
+class Estudiantefalso {
     val nombre = "pedrito"
     val apellido = "rodrigez"
 }

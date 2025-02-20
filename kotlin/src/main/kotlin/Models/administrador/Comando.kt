@@ -5,6 +5,6 @@ class Comando {
     val nombreComando = "Comando Ejemplo"
     val estadoComando = true
     val ubicacionComando = "Ciudad Ejemplo"
-    val fundacionId = "Fundacion001"
+    val fundacionId = "Fundacion001" // Relación con una fundación (sin usar una referencia directa)
     val brigadas = listOf("Brigada001", "Brigada002")
 }
