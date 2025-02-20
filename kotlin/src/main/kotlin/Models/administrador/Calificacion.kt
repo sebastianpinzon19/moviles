@@ -1,5 +1,7 @@
 package estudiante.kt.Models.administrador
 
+
+
 class Calificacion {
     val _id = "67890"
     val tituloCalificacion = "Matemáticas"

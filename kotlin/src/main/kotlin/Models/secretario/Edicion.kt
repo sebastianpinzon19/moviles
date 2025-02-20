@@ -1,5 +1,7 @@
 package estudiante.kt.Models.secretario
 
+import estudiante.kt.Models.administrador.*
+
 class Edicion {
     val tituloEdicion = "Edición 2023"
     val fechaInicioEdicion = "2023-01-01"

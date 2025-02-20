@@ -1,5 +1,7 @@
 package estudiante.kt
 
+
+import estudiante.kt.Models.Instructor.Asistencia
 import estudiante.kt.Models.secretario.*
 import estudiante.kt.Models.administrador.*
 
@@ -21,7 +23,8 @@ fun main() {
     mostrarTablaAuditorias()
     mostrarTablaComandos()
     mostrarTablaUnidades()
-    mostrarTablaEstudiantes()
+    mostrarTablaEstudiantesinstuctor()
+    mostrarTablaEstudiantessecretario()
     mostrarTablaUsuarios()
 }
 
@@ -48,7 +51,7 @@ fun mostrarTablaFundaciones() {
     println("\n--- Tabla de Fundaciones ---")
     println("| Nombre Fundación | Estado | Comandos          |")
     println("|------------------|--------|-------------------|")
-    println("| ${fundacion.nombreFundacion}         | ${fundacion.estadoFundacion}  | ${fundacion.comando?.joinToString(", ") ?: "N/A"} |")
+    println("| ${fundacion.nombreFundacion}         | ${fundacion.estadoFundacion}  | ${fundacion.comando.joinToString(", ") ?: "N/A"} |")
 }
 
 fun mostrarTablaHorarios() {
@@ -123,14 +126,20 @@ fun mostrarTablaUnidades() {
     println("| ${unidad._id} | ${unidad.nombreUnidad}  | ${unidad.estadoUnidad}   | ${unidad.brigadaId} | ${unidad.usuarioId} | ${unidad.estudiantes.joinToString(", ")} |")
 }
 
-fun mostrarTablaEstudiantes() {
+fun mostrarTablaEstudiantessecretario() {
     val estudiante = Estudiante()
     println("\n--- Tabla de Estudiantes ---")
     println("| ID        | Nombre  | Apellido | Correo                  | Numero Documento | Estado |")
     println("|-----------|---------|----------|------------------------|------------------|--------|")
     println("| ${estudiante._id} | ${estudiante.nombreEstudiante}  | ${estudiante.apellidoEstudiante} | ${estudiante.correoEstudiante} | ${estudiante.numeroDocumento}  | ${estudiante.estadoEstudiante} |")
 }
-
+fun mostrarTablaEstudiantesinstuctor() {
+    val estudiante = Estudiante()
+    println("\n--- Tabla de Estudiantes ---")
+    println("| ID        | Nombre  | Apellido | Correo                  | Numero Documento | Estado |")
+    println("|-----------|---------|----------|------------------------|------------------|--------|")
+    println("| ${estudiante._id} | ${estudiante.nombreEstudiante}  | ${estudiante.apellidoEstudiante} | ${estudiante.correoEstudiante} | ${estudiante.numeroDocumento}  | ${estudiante.estadoEstudiante} |")
+}
 fun mostrarTablaUsuarios() {
     val usuario = Usuario()
     println("\n--- Tabla de Usuarios ---")

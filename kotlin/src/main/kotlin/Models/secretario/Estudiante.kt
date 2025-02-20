@@ -1,21 +1,12 @@
 package estudiante.kt.Models.secretario
 
-import estudiante.kt.Models.administrador.*
-
-class Estudiantesecretario {
+class Estudiante {
     val _id = "Estudiante001"
-    val nombreEstudiante = "Juan"
-    val apellidoEstudiante = "Pérez"
-    val correoEstudiante = "juan.perez@ejemplo.com"
-    val tipoDocumento = "Cédula"
-    val numeroDocumento = "123456789"
-    val fechaNacimiento = "2000-01-01"
-    val generoEstudiante = "Masculino"
-    val unidadId = Unidad()
-    val colegioId = Colegio()
+    val nombreEstudiante = "Ana"
+    val apellidoEstudiante = "García"
+    val correoEstudiante = "ana.garcia@ejemplo.com"
+    val numeroDocumento = "987654321"
     val estadoEstudiante = true
-    val ediciones = listOf(Edicion())
-    val calificaciones = listOf(Calificacion())
-    val asistencias = listOf(Asistencia())
-    val certificados = listOf(Certificado())
+    val edicionId = Edicion()
+    val colegioId = estudiante.kt.Models.administrador.Colegio()
 }

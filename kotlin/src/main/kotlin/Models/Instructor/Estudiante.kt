@@ -1,8 +1,6 @@
-package estudiante.kt.Models.secretario
+package estudiante.kt.Models.Instructor
 
-import estudiante.kt.Models.administrador.*
-
-class Estudianteins {
+class Estudiante {
     val _id = "Estudiante001"
     val nombreEstudiante = "Juan"
     val apellidoEstudiante = "Pérez"
@@ -11,11 +9,7 @@ class Estudianteins {
     val numeroDocumento = "123456789"
     val fechaNacimiento = "2000-01-01"
     val generoEstudiante = "Masculino"
-    val unidadId = Unidad()
-    val colegioId = Colegio()
     val estadoEstudiante = true
-    val ediciones = listOf(Edicion())
     val calificaciones = listOf(Calificacion())
-    val asistencias = listOf(Asistencia())
-    val certificados = listOf(Certificado())
+    val asistencias = listOf(Asistencia()) // La relación con Asistencia queda aquí
 }
