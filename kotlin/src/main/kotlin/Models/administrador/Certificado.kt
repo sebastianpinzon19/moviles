@@ -1,6 +1,6 @@
 package estudiante.kt.Models.administrador
 
-import estudiante.kt.Models.secretario.Estudiante
+import estudiante.kt.Models.Instructor.Estudiante
 
 data class Certificado(
     val id: String,

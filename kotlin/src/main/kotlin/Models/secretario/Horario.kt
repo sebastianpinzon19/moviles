@@ -7,5 +7,5 @@ class Horario(
     val dia: String,
     val horaInicio: String,
     val horaFin: String,
-    val unidad: Unidad
+    val unidad: String
 )

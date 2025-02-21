@@ -1,6 +1,6 @@
 package estudiante.kt.Models.Instructor
 
-import estudiante.kt.Models.secretario.Estudiante
+import estudiante.kt.Models.Instructor.Estudiante
 import estudiante.kt.Models.secretario.Horario
 
 data class Asistencia(

@@ -1,8 +1,9 @@
-package estudiante.kt.Models.administrador
+package models.administrativo
 
-data class Unidad(
-    val id: String,
-    val nombre: String,
-    val descripcion: String,
-    val estado: Boolean
+class unidad (
+    val _id: String,
+    val nombreUnidad: String,
+    val estadoUnidad: Boolean,
+    val usuarioId: String,
+    val estudiantes: List<String>
 )
