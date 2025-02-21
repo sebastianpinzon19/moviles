@@ -1,6 +1,6 @@
 package estudiante.kt.Models.secretario
 
-import estudiante.kt.Models.administrador.Unidad
+import estudiante.kt.Models.administrador.*
 
 class Horario(
     val id: String,

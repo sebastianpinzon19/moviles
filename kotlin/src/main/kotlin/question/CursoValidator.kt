@@ -1,20 +1,20 @@
-package question
-
-import estudiante.kt.Models.administrador.Curso
+package question.question
 
 class CursoValidator {
 
-    fun validarCurso(curso: Curso
-    ): Boolean {
-        if (curso.nombre.isBlank()) {
-            println("Error: El nombre del curso no puede estar vacío.")
-            return false
+        fun validarNombreCurso(nombre: String){
+            if (nombre == "pedrito") {
+                println("nombre del curso valido")
+            } else {
+                println("El nombre del curso no puede ser 'pedrito'")
+            }
         }
 
-        if (curso.estado) {
-            println("Error: El curso debe estar activo.")
-            return false
+        fun validarEstadoCurso(estado: Boolean){
+        if (estado) {
+            println("El curso esta activo")
+        } else {
+            println("El curso está inactivo")
         }
-        return true
     }
 }
