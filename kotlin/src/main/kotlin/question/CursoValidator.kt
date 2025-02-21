@@ -3,10 +3,10 @@ package question.question
 class CursoValidator {
 
         fun validarNombreCurso(nombre: String){
-            if (nombre == "pedrito") {
+            if (nombre == "servicio social") {
                 println("nombre del curso valido")
             } else {
-                println("El nombre del curso no puede ser 'pedrito'")
+                println("El nombre del curso no pede estar vacio")
             }
         }
 
