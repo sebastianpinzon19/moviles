@@ -1,11 +1,11 @@
-package estudiante.kt.Models.secretario
+package estudiante.kt.Models.administrador
 
-class Curso {
-    val _id = "Curso001"
-    val nombreCurso = "Matemáticas Básicas"
-    val descripcionCurso = "Curso introductorio a las matemáticas"
-    val intensidadHorariaCurso = "40 horas"
-    val estadoCurso = true
-    val fundacionId = "Fundacion001"
-    val ediciones = listOf(565212)
-}
+import estudiante.kt.Models.secretario.Edicion
+
+data class Curso(
+    val id: String,
+    val nombre: String,
+    val descripcion: String,
+    val estado: Boolean,
+    val edicion: Edicion
+)

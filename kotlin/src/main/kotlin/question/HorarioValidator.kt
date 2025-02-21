@@ -1,13 +1,10 @@
 package question
 
+import estudiante.kt.Models.secretario.Horario
+
 object HorarioValidator {
 
-    fun validarHorario(
-        titulo: String,
-        horaInicio: String,
-        horaFin: String,
-        estado: Boolean
-    ): Boolean {
+    fun validarHorario(horario: Horario): Boolean {
         if (titulo.isBlank()) {
             println("Error: El título del horario no puede estar vacío.")
             return false

@@ -2,19 +2,27 @@ package question
 
 object AsistenciaValidator {
 
-    /**
-     * Valida los registros de asistencia.
-     *
-     * @param estudianteId ID del estudiante
-     * @param fecha Fecha de asistencia
-     * @param estado Estado de la asistencia (Presente, Ausente, Tardanza)
-     * @return true si los datos son válidos
-     */
-    fun validarAsistencia(estudianteId: Int, fecha: String, estado: String): Boolean {
-        require(estudianteId > 0) { "El ID del estudiante debe ser mayor a 0." }
-        require(fecha.matches(Regex("\\d{4}-\\d{2}-\\d{2}"))) { "La fecha debe estar en el formato yyyy-MM-dd." }
-        require(estado in listOf("Presente", "Ausente", "Tardanza")) { 
-            "El estado de asistencia debe ser Presente, Ausente o Tardanza."
+    fun validarAsistencia(
+        tituloAsistencia: String,
+        fechaAsistencia: String,
+        estadoAsistencia: Boolean,
+        estudiantes: List<String>
+    ): Boolean {
+        if (tituloAsistencia.isBlank()) {
+            println("Error: El título de la asistencia no puede estar vacío.")
+            return false
+        }
+        if (!fechaAsistencia.matches(Regex("\\d{4}-\\d{2}-\\d{2}"))) {
+            println("Error: La fecha de asistencia debe estar en el formato yyyy-MM-dd.")
+            return false
+        }
+        if (!estadoAsistencia) {
+            println("Error: El registro de asistencia debe estar activo.")
+            return false
+        }
+        if (estudiantes.isEmpty()) {
+            println("Error: La asistencia debe tener al menos un estudiante asociado.")
+            return false
         }
         return true
     }

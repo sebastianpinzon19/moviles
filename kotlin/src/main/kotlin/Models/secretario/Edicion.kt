@@ -1,12 +1,9 @@
 package estudiante.kt.Models.secretario
 
-import estudiante.kt.Models.administrador.*
-
-class Edicion {
-    val tituloEdicion = "Edición 2023"
-    val fechaInicioEdicion = "2023-01-01"
-    val fechaFinEdicion = "2023-06-30"
-    val estadoEdicion = true
-    val cursoId = "Curso001"
-    val horarios = listOf("Lunes 8:00-10:00", "Miércoles 8:00-10:00")
-}
+data class Edicion(
+    val id: String,
+    val titulo: String,
+    val fechaInicio: String,
+    val fechaFin: String,
+    val estado: Boolean
+)

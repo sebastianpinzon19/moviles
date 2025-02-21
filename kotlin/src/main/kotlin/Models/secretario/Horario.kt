@@ -1,8 +1,11 @@
 package estudiante.kt.Models.secretario
 
-class Horario {
-    val tituloHorario = "Horario Mañana"
-    val horaInicio = "08:00"
-    val horaFin = "10:00"
-    val estadoHorario = true
-}
+import estudiante.kt.Models.administrador.Unidad
+
+class Horario(
+    val id: String,
+    val dia: String,
+    val horaInicio: String,
+    val horaFin: String,
+    val unidad: Unidad
+)

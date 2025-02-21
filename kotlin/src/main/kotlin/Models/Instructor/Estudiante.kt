@@ -1,15 +1,15 @@
 package estudiante.kt.Models.Instructor
 
-class Estudiante {
-    val _id = "Estudiante001"
-    val nombreEstudiante = "Juan"
-    val apellidoEstudiante = "Pérez"
-    val correoEstudiante = "juan.perez@ejemplo.com"
-    val tipoDocumento = "Cédula"
-    val numeroDocumento = "123456789"
-    val fechaNacimiento = "2000-01-01"
-    val generoEstudiante = "Masculino"
-    val estadoEstudiante = true
-    val calificaciones = listOf(Calificacion())
-    val asistencias = listOf(Asistencia()) // La relación con Asistencia queda aquí
-}
+import estudiante.kt.Models.administrador.Colegio
+import estudiante.kt.Models.secretario.Edicion
+
+data class Estudiante(
+    val id: String,
+    val nombre: String,
+    val apellido: String,
+    val correo: String,
+    val numeroDocumento: String,
+    val estado: Boolean,
+    val edicion: Edicion,
+    val colegio: Colegio
+)

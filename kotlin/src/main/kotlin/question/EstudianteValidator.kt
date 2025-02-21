@@ -1,27 +1,21 @@
-package question
+import estudiante.kt.Models.Instructor.Estudiante
 
 object EstudianteValidator {
 
-    fun validarEstudiante(
-        nombre: String,
-        apellido: String,
-        correo: String,
-        numeroDocumento: String,
-        estado: Boolean
-    ): Boolean {
-        if (nombre.isBlank() || apellido.isBlank()) {
+    fun validarEstudiante(estudiante: Estudiante): Boolean {
+        if (estudiante.nombre.isBlank() || estudiante.apellido.isBlank()) {
             println("Error: El nombre y apellido no pueden estar vacíos.")
             return false
         }
-        if (!correo.matches(Regex("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\$"))) {
-            println("Error: El correo proporcionado no es válido.")
+        if (!estudiante.correo.matches(Regex("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$"))) {
+            println("Error: El correo no es válido.")
             return false
         }
-        if (!numeroDocumento.matches(Regex("\\d+"))) {
-            println("Error: El número de documento solo puede contener dígitos.")
+        if (estudiante.numeroDocumento.isBlank()) {
+            println("Error: El número de documento no puede estar vacío.")
             return false
         }
-        if (!estado) {
+        if (!estudiante.estado) {
             println("Error: El estudiante debe estar activo.")
             return false
         }

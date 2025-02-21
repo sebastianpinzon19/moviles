@@ -1,12 +1,12 @@
-package estudiante.kt.Models.administrador
+package estudiante.kt.Models.secretario
 
+import estudiante.kt.Models.Instructor.Estudiante
+import estudiante.kt.Models.administrador.Curso
 
-
-class Calificacion {
-    val _id = "67890"
-    val tituloCalificacion = "Matemáticas"
-    val aprobado = true
-    val usuarioId = "Usuario001"
-    val estadoCalificacion = true
-    val estudiantes = listOf("Estudiante001", "Estudiante002")
-}
+data class Calificacion(
+    val id: String,
+    val nota: Double,
+    val observaciones: String?,
+    val estudiante: Estudiante,
+    val curso: Curso
+)

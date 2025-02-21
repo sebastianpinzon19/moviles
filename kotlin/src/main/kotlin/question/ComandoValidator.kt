@@ -2,22 +2,33 @@ package question
 
 object ComandoValidator {
 
-    /**
-     * Valida parámetros necesarios para ejecutar un comando del sistema.
-     *
-     * @param nombreComando Nombre del comando
-     * @param parametros Parámetros asociados al comando
-     * @return true si los datos son válidos
-     */
-    fun validarComando(nombreComando: String, parametros: Map<String, String>): Boolean {
-        require(nombreComando.isNotBlank()) { "El nombre del comando no puede estar vacío." }
-        require(parametros.isNotEmpty()) { "Los parámetros no pueden estar vacíos." }
-
-        parametros.forEach { (key, value) ->
-            require(key.isNotBlank()) { "La clave del parámetro '$key' no puede estar vacía." }
-            require(value.isNotBlank()) { "El valor del parámetro '$value' no puede estar vacío." }
+    fun validarComando(
+        nombreComando: String,
+        estadoComando: Boolean,
+        ubicacionComando: String,
+        fundacionId: String,
+        brigadas: List<String>
+    ): Boolean {
+        if (nombreComando.isBlank()) {
+            println("Error: El nombre del comando no puede estar vacío.")
+            return false
         }
-
+        if (!estadoComando) {
+            println("Error: El comando debe estar activo.")
+            return false
+        }
+        if (ubicacionComando.isBlank()) {
+            println("Error: La ubicación del comando no puede estar vacía.")
+            return false
+        }
+        if (fundacionId.isBlank()) {
+            println("Error: El fundación asociada al comando no es válida.")
+            return false
+        }
+        if (brigadas.isEmpty()) {
+            println("Error: El comando debe tener al menos una brigada asociada.")
+            return false
+        }
         return true
     }
 }
