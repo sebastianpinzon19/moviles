@@ -1,9 +1,6 @@
 package question.question.clases
 
-import question.Animal
-
-
-class Perro : Animal() {
+class Perro4 : Animal() {
     override fun hacerSonido() {
         println("Guau!")
     }
