@@ -31,8 +31,9 @@ fun ejecutarNivel4() {
 
         //#3
         val nombres = mutableListOf("Carlos", "Ana", "Pedro")
-        nombres.add("María")
+        nombres.addAll(listOf("María", "Juan", "Luis", "sebastian"))
         println("Lista actualizada: $nombres")
+
 //
 //        //#4
 //        val getterInstance = getter()

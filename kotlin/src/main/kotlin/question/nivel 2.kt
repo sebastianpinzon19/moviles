@@ -22,9 +22,9 @@ fun ejecutarNivel2() {
     //3
     val productoPrecio = 100000 // Precio del producto en pesos colombianos
     val porcentajeDescuento = 15// Porcentaje de descuento (por ejemplo, 15%)
-    val finalPrice = productoPrecio - (productoPrecio * porcentajeDescuento / 100)
+    val preciofinal = productoPrecio - (productoPrecio * porcentajeDescuento / 100)
 
-    println("El precio final del producto en pesos colombianos es: $finalPrice ")
+    println("El precio final del producto en pesos colombianos es: $preciofinal")
 
     //4
     // Solicita tres números al usuario, calcúlalos y muestra el promedio.
