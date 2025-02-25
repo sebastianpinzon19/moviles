@@ -1,4 +1,4 @@
-//package question.question
+package question.question.tu.paquete.curso//package question.question
 //
 //class EstudianteValidador {
 //
