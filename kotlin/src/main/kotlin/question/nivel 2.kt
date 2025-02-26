@@ -1,4 +1,5 @@
 package question
+
 fun ejecutarNivel2() {
     println("============nivel 2====================")
 
@@ -16,7 +17,6 @@ fun ejecutarNivel2() {
     } else {
         println("Por favor, ingrese un número válido.")
     }
-
 //    //#2
 //    val double = 10.5
 //    val float = 5.5
@@ -41,6 +41,7 @@ fun ejecutarNivel2() {
 //
 //    val promedio = (num1 + num2 + num3) / 3
 //    println("El promedio de los tres números es: $promedio")
+
 
     println("Fin del nivel 2")
 }

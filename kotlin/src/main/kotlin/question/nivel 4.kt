@@ -29,10 +29,22 @@ fun ejecutarNivel4() {
 //
 //        cuenta.retirar(400_000.0)
 
-        //#3
-        val nombres = mutableListOf("Carlos", "Ana", "Pedro")
+//        //#3
+//        val nombres = mutableListOf("Carlos", "Ana", "Pedro")
+//        nombres.addAll(listOf("María", "Juan", "Luis", "sebastian"))
+//        println("Lista actualizada: $nombres")
+
+        print("Ingrese los nombres iniciales separados por comas: ")
+        val nombres = readLine()
+                ?.split(",")
+                ?.map {
+                        it.trim()
+                }
+                ?.toMutableList()
+                ?: mutableListOf()
         nombres.addAll(listOf("María", "Juan", "Luis", "sebastian"))
         println("Lista actualizada: $nombres")
+
 
 //
 //        //#4

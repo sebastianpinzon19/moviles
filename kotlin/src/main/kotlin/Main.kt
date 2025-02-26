@@ -1,10 +1,13 @@
 package question
 
+import question.question.ejecutarNivel4
+
+
 fun main() {
 //     ejecutarNivel1()
-     ejecutarNivel2()
+//     ejecutarNivel2()
 //     ejecutarNivel3()
-//     ejecutarNivel4()
+     ejecutarNivel4()
 //     ejecutarNivel5()
 }
 
