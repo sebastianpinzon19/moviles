@@ -14,7 +14,7 @@ fun ejecutarNivel4() {
 //        for (numero in numeros) {
 //                println(numero)
 //        }
-//
+
 //        //#2
 //        val cuenta = cuentaBancaria()
 //
@@ -37,13 +37,25 @@ fun ejecutarNivel4() {
         print("Ingrese los nombres iniciales separados por comas: ")
         val nombres = readLine()
                 ?.split(",")
-                ?.map {
-                        it.trim()
-                }
                 ?.toMutableList()
                 ?: mutableListOf()
         nombres.addAll(listOf("María", "Juan", "Luis", "sebastian"))
         println("Lista actualizada: $nombres")
+
+        println("quieres agregar otros nombres? s/n")
+        val otroNombre = readLine()
+        if (otroNombre == "s") {
+                print("Ingrese los nombres iniciales separados por comas: ")
+                val otrosNombres = readLine()
+                        ?.split(",")
+                        ?.toMutableList()
+                        ?: mutableListOf()
+                nombres.addAll(otrosNombres)
+                println("Lista actualizada: $nombres")
+        }else {
+                println("Fin del programa")
+        }
+
 
 
 //

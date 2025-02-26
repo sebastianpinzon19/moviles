@@ -1,6 +1,7 @@
 package question
 
-import question.question.clases.numeros
+
+import question.question.clases.numerosmultiplicacion3
 
 
 fun ejecutarNivel3() {
@@ -44,7 +45,7 @@ fun ejecutarNivel3() {
 
 
     //#4
-    val result = numeros().multiplicacion(5, 3)
+    val result = numerosmultiplicacion3().multiplicacion(5, 3)
     println("El producto de los números es: $result")
 
 
