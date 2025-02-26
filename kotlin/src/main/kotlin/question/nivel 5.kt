@@ -35,6 +35,6 @@ fun ejecutarNivel5() {
     val libroEjemplo = Libro("1984", "George Orwell", 1949)
     println("Detalles del libro: Título - ${libroEjemplo.titulo}, Autor - ${libroEjemplo.autor}, Año - ${libroEjemplo.anioPublicacion}")
 
-    println("Fin del nivel 5")
+    println("===================Fin del nivel 5=====================")
 }
 

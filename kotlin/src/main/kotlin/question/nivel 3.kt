@@ -44,9 +44,10 @@ fun ejecutarNivel3() {
 
 
 
-    //#4
-    val result = numerosmultiplicacion3().multiplicacion(5, 3)
-    println("El producto de los números es: $result")
+//    //#4
+//    val result = numerosmultiplicacion3().multiplicacion(5, 3)
+//    println("El producto de los números es: $result")
+
 
 
      //#5
