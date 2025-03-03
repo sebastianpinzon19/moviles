@@ -1,6 +1,6 @@
 //package question.question
 //
-//data class Libro(val titulo: String, val autor: String, val anioPublicacion: Int)
+//data class question.question.biblioteca.Libro(val titulo: String, val autor: String, val anioPublicacion: Int)
 //
 //fun ejecutarNivel5() {
 //    println("============nivel 5====================")
@@ -32,7 +32,7 @@
 //    ejecutarFuncion { println("Soy una función lambda ejecutándose dentro de otra función.") }
 //
 //    // #24: Uso de data class
-//    val libroEjemplo = Libro("1984", "George Orwell", 1949)
+//    val libroEjemplo = question.question.biblioteca.Libro("1984", "George Orwell", 1949)
 //    println("Detalles del libro: Título - ${libroEjemplo.titulo}, Autor - ${libroEjemplo.autor}, Año - ${libroEjemplo.anioPublicacion}")
 //
 //    println("===================Fin del nivel 5=====================")

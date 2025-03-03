@@ -1,21 +1,11 @@
 package question
 
-import arreglos
+import ejecutarBiblioteca
 
 
-//import question.question.clases.numerosmultiplicacion3
-//import question.question.ejecutarNivel4
-//import question.question.ejecutarNivel5
-
-
-//     ejecutarNivel1()
-//     ejecutarNivel2()
-//     ejecutarNivel3()
-//     ejecutarNivel4()
-//     ejecutarNivel5()
 fun main(){
 
-       arreglos()
+       ejecutarBiblioteca()
 }
 
 
@@ -43,7 +33,17 @@ fun main(){
 
 
 
+//import question.question.clases.numerosmultiplicacion3
+//import question.question.ejecutarNivel4
+//import question.question.ejecutarNivel5
 
+
+//     ejecutarNivel1()
+//     ejecutarNivel2()
+//     ejecutarNivel3()
+//     ejecutarNivel4()
+//     ejecutarNivel5()
+//     arreglos()
 
 //
 //       val numerosmultiplicacion3 = numerosmultiplicacion3()
