@@ -6,7 +6,7 @@ abstract class Vehiculo(val marca: String, val modelo: String) {
 
     abstract fun arrancar()
 
-    fun detener() { velocidadActual = 0
+    open fun detener() { velocidadActual = 0
         println("El vehiculo $marca modelo $modelo se ha detenido")
     }
 
