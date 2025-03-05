@@ -1,23 +1,15 @@
 package question
 
+import question.question.vehiculo.Coche
 import question.question.vehiculo.ejecutarBicicleta
 
 import question.question.vehiculo.ejecutarVehiculo
+import question.question.vehiculo.elegirvehiculo
+import question.question.vehiculoseb.menuDeControl
 
 fun main() {
-    while (true) {
-        println("\n¿Qué vehículo desea usar?")
-        println("1. Coche")
-        println("2. Bicicleta")
-        println("3. Salir")
-
-        when (readLine()?.toIntOrNull()) {
-            1 -> ejecutarVehiculo()
-            2 -> ejecutarBicicleta()
-            3 -> break
-            else -> println("Opción no válida")
-        }
-    }
+    //elegirvehiculo()
+   menuDeControl()
 }
 
 

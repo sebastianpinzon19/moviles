@@ -6,19 +6,32 @@ abstract class Vehiculo(
     val modelo: String,
     val año: Int
 ) : Conducible {
-    private var velocidadActual: Double = 0.0
+    var velocidadActual: Double = 0.0
     private var marchaActual: Int = 0 // 0 = punto muerto
     private val velocidadMaximaPorMarcha = listOf(0.0, 30.0, 60.0, 90.0, 120.0, 150.0) // Velocidades máximas por marcha
-    var estaRoto: Boolean = false // Indica si el vehículo está roto
+    private var estaRoto: Boolean = false
 
-    // Métodos abstractos
+
     abstract fun realizarMantenimiento()
     abstract fun mostrarEspecificaciones()
 
-    // Métodos comunes
+
+    fun setEstaRoto(estado: Boolean) {
+        estaRoto = estado
+    }
+
+    fun setMarchaActual(marcha: Int) {
+        if (marcha in 0 until velocidadMaximaPorMarcha.size) {
+            marchaActual = marcha
+        } else {
+            println("Marcha inválida.")
+        }
+    }
+
+
     fun acelerar(velocidad: Double) {
         if (estaRoto) {
-            println("¡$marca $modelo está roto y no puede acelerar!")
+            println("¡$marca $modelo está roto y no puede acelerar! Deten el vehiculo y realiza el mantenimiento.")
             return
         }
         if (marchaActual == 0) {
@@ -56,6 +69,7 @@ abstract class Vehiculo(
                 marchaActual++
             }
             println("$marca $modelo ha subido a la marcha $marchaActual.")
+            println("Velocidad máxima permitida para la marcha $marchaActual: ${velocidadMaximaPorMarcha[marchaActual]} km/h.")
             verificarVelocidad()
         } else {
             println("$marca $modelo ya está en la marcha más alta.")
@@ -70,6 +84,7 @@ abstract class Vehiculo(
         if (marchaActual > 0) {
             marchaActual--
             println("$marca $modelo ha bajado a la marcha $marchaActual.")
+            println("Velocidad máxima permitida para la marcha $marchaActual: ${velocidadMaximaPorMarcha[marchaActual]} km/h.")
             verificarVelocidad()
         } else {
             println("$marca $modelo ya está en punto muerto.")
@@ -77,6 +92,7 @@ abstract class Vehiculo(
     }
 
     fun cambiarMarcha(marchaDeseada: Int) {
+        println("Cambia a un marcha 1, 2, 3, 4, ")
         if (estaRoto) {
             println("¡$marca $modelo está roto y no puede cambiar de marcha!")
             return
@@ -90,7 +106,7 @@ abstract class Vehiculo(
             return
         }
         if (marchaDeseada > marchaActual + 1 || marchaDeseada < marchaActual - 1) {
-            println("¡Error! No puedes saltarte marchas. Cambia de una en una.")
+            println("¡Error! No puedes saltarte marchas. jajaja Novato")
             return
         }
         marchaActual = marchaDeseada
@@ -110,7 +126,7 @@ abstract class Vehiculo(
     override fun arrancar() {
         if (marchaActual != 0 && marchaActual != 1) {
             estaRoto = true
-            println("¡Error! $marca $modelo intentó arrancar en la marcha $marchaActual. El vehículo se ha roto.")
+            println("¡Error! $marca $modelo intentó arrancar en la marcha $marchaActual. El vehículo se Rompio:((.")
             return
         }
         if (marchaActual == 0) {

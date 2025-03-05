@@ -2,9 +2,9 @@ package question.question.vehiculoseb
 import kotlin.system.exitProcess
 
 fun menuDeControl(){
-val coche = Coche("Toyota", "Corolla", 2020, 4)
-val moto = Motocicleta("Harley-Davidson", "Sportster", 2019, false)
-val camion = Camion("Volvo", "FH16", 2018, 20000.0)
+val coche = Coche("CocheDeBatman", "Renolt", 2020, 4)
+val moto = Motocicleta("NS200", "Pulsar", 2019, false)
+val camion = Camion("Chiva", "Renolt", 2018, 20000.0)
 
 println("Bienvenido al simulador de vehículos.")
 println("Selecciona un vehículo:")
@@ -14,7 +14,7 @@ println("3. Camión")
 print("Opción: ")
 val opcionVehiculo = readLine()?.toIntOrNull()
 
-val vehiculo = when (opcionVehiculo) {
+var vehiculo = when (opcionVehiculo) {
     1 -> coche
     2 -> moto
     3 -> camion
@@ -39,6 +39,7 @@ val vehiculo = when (opcionVehiculo) {
         println("8. Mostrar información")
         println("9. Realizar mantenimiento")
         println("10. Mostrar especificaciones")
+        println("14. Cambiar Vehiculo")
         if (vehiculo is Coche) println("11. Abrir puertas")
         if (vehiculo is Motocicleta) println("12. Hacer caballito")
         if (vehiculo is Camion) println("13. Cargar")
@@ -79,7 +80,25 @@ val vehiculo = when (opcionVehiculo) {
                 val peso = readLine()?.toDoubleOrNull() ?: 0.0
                 vehiculo.cargar(peso)
             }
+            14 -> {
+                println("Selecciona un vehículo:")
+                println("1. Coche")
+                println("2. Motocicleta")
+                println("3. Camión")
+                print("Opción: ")
+                val opcionVehiculo = readLine()?.toIntOrNull()
 
+                vehiculo = when (opcionVehiculo) {
+
+                    1 -> coche
+                    2 -> moto
+                    3 -> camion
+                    else -> {
+                        println("Opción inválida.")
+                        continue
+                    }
+                }
+            }
             0 -> {
                 println("Saliendo del programa.")
                 break
